@@ -1,0 +1,172 @@
+/* ==========================================================================
+   1. VARIABLES DE DISEÑO (Fácil de personalizar)
+   ========================================================================== */
+:root {
+  --primary-color: #2563eb;       /* Azul moderno */
+  --primary-hover: #1d4ed8;       /* Azul más oscuro para botones */
+  --bg-color: #f8fafc;            /* Fondo gris ultra claro */
+  --card-bg: #ffffff;             /* Fondo blanco para cajas y formularios */
+  --text-color: #1e293b;          /* Gris oscuro para lectura cómoda */
+  --text-light: #64748b;          /* Gris claro para subtítulos y placeholders */
+  --border-color: #e2e8f0;        /* Gris suave para bordes */
+  --radius: 8px;                  /* Esquinas redondeadas estándar */
+  --transition: all 0.2s ease-in-out;
+}
+
+/* ==========================================================================
+   2. REINICIO DE ESTILOS (Reset básico)
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* Desplazamiento suave para cuando uses enlaces internos */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   3. TIPOGRAFÍA Y ENLACES
+   ========================================================================== */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.75rem; }
+
+p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+/* Estilos para Link/NavLink de React Router y etiquetas <a> */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* ==========================================================================
+   4. ESTRUCTURA GLOBAL (Estructura base de App.jsx)
+   ========================================================================== */
+/* Contenedor del menú de navegación */
+nav {
+  display: flex;
+  gap: 1.5rem;
+  background-color: var(--card-bg);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+nav a {
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+nav a:hover, 
+nav a.active { /* Para cuando uses NavLink de React Router */
+  color: var(--primary-color);
+}
+
+/* Contenedor principal de tus páginas inyectadas */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* ==========================================================================
+   5. FORMULARIOS E INPUTS (Optimizado para tus componentes)
+   ========================================================================== */
+form {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  max-width: 500px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  color: var(--text-color);
+  transition: var(--transition);
+  outline: none;
+  margin-bottom: 1.25rem;
+}
+
+/* Efecto visual cuando el usuario hace clic en el input */
+input:focus,
+textarea:focus {
+  border-color: var(--primary-color);
+  background-color: var(--card-bg);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+input::placeholder {
+  color: var(--text-light);
+  opacity: 0.6;
+}
+
+/* ==========================================================================
+   6. BOTONES
+   ========================================================================== */
+button, 
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%; /* Ocupa todo el ancho en formularios */
+}
+
+button:hover,
+.btn:hover {
+  background-color: var(--primary-hover);
+}
+
+button:active {
+  transform: scale(0.98);
+}
