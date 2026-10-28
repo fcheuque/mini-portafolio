@@ -17,6 +17,7 @@ function Habilidades() {
             <li><Link to="/">Inicio</Link></li>
             <li><Link to="/nosotros">Acerca de mi</Link></li>
             <li><Link to="/habilidades" className="active">Habilidades</Link></li>
+            <li><Link to="/proyectos">Proyectos</Link></li>
             <li><Link to="/contacto">Contacto</Link></li>
           </ul>
         </nav>

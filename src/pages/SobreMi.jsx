@@ -1,43 +1,53 @@
-function SobreMi() {
-    return <>
+import { Link } from 'react-router-dom';
 
-    <header>
-        <div class="logo">
-            <a href="index.html">WebCh</a>
+function SobreMi() {
+  return (
+    <>
+      <header>
+        <div className="logo">
+          <Link to="/">WebCh</Link>
         </div>
         <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html" class="active">Acerca de mi</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+          <ul>
+            <li><Link to="/">Inicio</Link></li>
+            <li><Link to="/nosotros" className="active">Acerca de mi</Link></li>
+            <li><Link to="/habilidades">Habilidades</Link></li>
+            <li><Link to="/proyectos">Proyectos</Link></li>
+            <li><Link to="/contacto">Contacto</Link></li>
+          </ul>
         </nav>
-    </header>
+      </header>
 
-    <main>
-        <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/img/mi-foto.jpg'); background-size: cover; background-position: center; color: white;">
-            <h1>Quien soy</h1>
-            <p>Soy un estudiante de ingenieria en informatica de la universidad catolica de temuco.</p>
+      <main>
+        <section 
+          className="hero" 
+          style={{ 
+            backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/img/mi-foto.jpg')", 
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center', 
+            color: 'white' 
+          }}
+        >
+          <h1>Quién soy</h1>
+          <p>Soy un estudiante de ingeniería en informática de la Universidad Católica de Temuco.</p>
         </section>
 
-        <section class="features">
-            <h2>Mis proyectos y hobbies</h2>
-            <div class="grid">
-                <article class="card">
-                    <h3>Hobbies</h3>
-                    <p>VoleyBall Ping-Pong Python Mysql AWS y más</p>
-                </article>
-                <article class="card">
-                    <h3>Mi Visión</h3>
-                    <p>Este proyecto esta destinado a futuros creadores de contenido o proyectos como pymes.</p>
-                </article>
-            </div>
+        <section className="features">
+          <h2>Mis proyectos y hobbies</h2>
+          <div className="grid">
+            <article className="card">
+              <h3>Hobbies</h3>
+              <p>VoleyBall, Ping-Pong, Python, MySQL, AWS y más.</p>
+            </article>
+          </div>
         </section>
-    </main>
-    <footer>
+      </main>
+
+      <footer>
         <p>&copy; 2026 WebCh. Todos los derechos reservados.</p>
-    </footer>
-
-</>
+      </footer>
+    </>
+  );
 }
-export default SobreMi
+
+export default SobreMi;

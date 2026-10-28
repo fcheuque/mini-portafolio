@@ -1,37 +1,41 @@
+import { Link } from 'react-router-dom'; 
+
 function Inicio() {
-    return <>
-    <header>
-        <a href="index.html" class="logo">WebCh</a>
+  return (
+    <>
+      <header>
+        <Link to="/" className="logo">WebCh</Link>
         <nav>
-            <ul>
-                <li><a href="index.html" class="active">Inicio</a></li>
-                <li><a href="nosotros.html">Acerca de mi</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+          <ul>
+            <li><Link to="/" className="active">Inicio</Link></li>
+            <li><Link to="/nosotros">Acerca de mi</Link></li>
+            <li><Link to="/habilidades">Habilidades</Link></li>
+            <li><Link to="/proyectos">Proyectos</Link></li>
+            <li><Link to="/contacto">Contacto</Link></li>
+          </ul>
         </nav>
-    </header>
+      </header>
 
-    <main>
-        
-        <section class="hero">
-            <h1>Bienvenido a mi sitio web</h1>
-            <p>Felipe Cheuque.</p>
-            <a href="contacto.html" class="btn">Saber más</a>
+      <main>
+        <section className="hero">
+          <h1>Bienvenido a mi sitio web</h1>
+          <p>Felipe Cheuque.</p>
+          <Link to="/contacto" className="btn">Saber más</Link>
         </section>
 
-        <section class="grid-features">
-            <article>
-                <h3>Explora mi sitio web!!</h3>
-                <p>Creado con Vite y React.</p>
-            </article>
+        <section className="grid-features">
+          <article>
+            <h3>Explora mi sitio web!!</h3>
+            <p>Creado con Vite y React.</p>
+          </article>
         </section>
+      </main>
 
-    </main>
-
-    <footer>
+      <footer>
         <p>&copy; 2026 WebCh. Todos los derechos reservados.</p>
-    </footer>
-
-</>
+      </footer>
+    </>
+  );
 }
-export default Inicio
+
+export default Inicio;
