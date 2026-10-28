@@ -1,5 +1,5 @@
 function Inicio() {
-    return <body>
+    return <>
     <header>
         <a href="index.html" class="logo">WebCh</a>
         <nav>
@@ -32,6 +32,6 @@ function Inicio() {
         <p>&copy; 2026 WebCh. Todos los derechos reservados.</p>
     </footer>
 
-</body>
+</>
 }
 export default Inicio

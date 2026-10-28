@@ -3,3 +3,4 @@ PREGUNTAS A LA IA:
 -como puedo importar browseRouter
 -como puedo crear paginas de jsx para inyectarlas a app.jsx
 -se puede usar input en jsx al ser una pagina inyectada hacia app.jsx?
+-dame un ejemplo de la parte de habilidades con destrezas cognitivas

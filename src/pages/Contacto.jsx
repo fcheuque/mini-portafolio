@@ -1,5 +1,5 @@
 function Contacto() {
-    return <body>
+    return <>
 
     <header>
         <div class="logo">
@@ -47,6 +47,6 @@ function Contacto() {
         <p>&copy; 2026 WebCh. Todos los derechos reservados.</p>
     </footer>
 
-</body>
+</>
 }
 export default Contacto
